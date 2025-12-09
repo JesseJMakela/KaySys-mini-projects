@@ -1,0 +1,4 @@
+foo bar
+This line has foo in it
+Another line without the word
+foolish test
