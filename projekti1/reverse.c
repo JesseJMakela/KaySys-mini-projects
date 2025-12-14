@@ -113,6 +113,12 @@ int main(int argc, char *argv[])
         if (linelen > 0 && line[linelen - 1] == '\n')
             line[linelen - 1] = '\0';
 
+        /* Check if line is "0" - signals end of input from stdin */
+        if (argc == 1 && strcmp(line, "0") == 0)
+        {
+            break;
+        }
+
         char *copy = malloc(strlen(line) + 1);
         if (copy == NULL)
         {
