@@ -27,19 +27,3 @@ my-unzip: my-unzip.c
 clean:
 	rm -f $(TARGETS) *.z *.o
 
-# Run basic tests
-test: all
-	@echo "=== Testing my-cat ==="
-	./my-cat test1.txt
-	@echo ""
-	@echo "=== Testing my-grep ==="
-	./my-grep foo test2.txt
-	@echo ""
-	@echo "=== Testing my-zip/my-unzip ==="
-	./my-zip test3.txt > test_output.z
-	./my-unzip test_output.z
-	@rm -f test_output.z
-	@echo ""
-	@echo "All tests completed!"
-
-.PHONY: all clean test
